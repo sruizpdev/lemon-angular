@@ -13,6 +13,7 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { CrudComponent } from "./components/crud/crud.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { GaleriaComponent } from "./components/galeria/galeria.component";
+import { AuthService } from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { GaleriaComponent } from "./components/galeria/galeria.component";
     BrowserAnimationsModule,
     MatSliderModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
