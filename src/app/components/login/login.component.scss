@@ -26,3 +26,11 @@
     color: gray;
   }
 }
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 10px solid #42a948;
+}
+
+.ng-invalid:not(form) {
+  border-left: 10px solid #a94442;
+}

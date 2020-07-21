@@ -14,7 +14,7 @@ import { CrudComponent } from "./components/crud/crud.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { GaleriaComponent } from "./components/galeria/galeria.component";
 import { AuthService } from "./services/auth.service";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     MatSliderModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],

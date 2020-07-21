@@ -4,14 +4,14 @@
     <p>username = master8@lemoncode.net y password: 12345678</p>
     <form [formGroup]="profileForm" (ngSubmit)="login()">
 
-        <input type="email" formControlName="email" placeholder=" Aquí tu email...">
+        <input [(ngModel)]="profileForm.value.email" formControlName="email" placeholder=" Aquí tu email..." required
+            email>
+        <p>El campo es obligatorio</p>
 
-        <input type="text" formControlName="password" placeholder="Aquí tu password">
+        <input type="text" [(ngModel)]="profileForm.value.password" formControlName="password"
+            placeholder="Aquí tu password" required>
 
-
-
-
-        <button type="submit" [disabled]="!profileForm.valid">Login</button>
+        <button type="submit">Login</button>
 
     </form>
 </div>
