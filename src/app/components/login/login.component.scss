@@ -1,8 +1,28 @@
 .container {
   width: 400px;
-  margin: 0 auto;
-  border: 1px solid ghostwhite;
-  border-radius: 10px;
+  border: 1px solid rgb(147, 147, 147);
+
+  padding: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
+  input {
+    display: block;
+    margin-bottom: 20px;
+    padding: 1rem;
+    width: 350px;
+  }
+  button {
+    padding: 1rem;
+    width: 100px;
+    &:hover {
+      color: white;
+      background-color: gray;
+      border: 1px solid #333333;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+    color: gray;
+  }
 }

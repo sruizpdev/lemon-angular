@@ -1,16 +1,16 @@
 <app-navbar></app-navbar>
 <div class="container">
     <h1>Login page</h1>
+    <p>username = master8@lemoncode.net y password: 12345678</p>
     <form [formGroup]="profileForm" (ngSubmit)="login()">
-        <label>
-            Email:
-            <input type="email" formControlName="email">
-        </label>
 
-        <label>
-            Password:
-            <input type="text" formControlName="password">
-        </label>
+        <input type="email" formControlName="email" placeholder=" Aquí tu email...">
+
+        <input type="text" formControlName="password" placeholder="Aquí tu password">
+
+
+
+
         <button type="submit" [disabled]="!profileForm.valid">Login</button>
 
     </form>

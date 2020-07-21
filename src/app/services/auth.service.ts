@@ -15,7 +15,7 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    if (username === "2@2.com" && password === "111") {
+    if (username === "master8@lemoncode.net" && password === "12345678") {
       this.user.logged = true;
       this.user.username = username;
       this.user.password = password;
