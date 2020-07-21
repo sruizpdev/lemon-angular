@@ -1,4 +1,4 @@
-<ul>
+<ul *ngIf='!logado'>
     <li routerLinkActive="active">
         <a [routerLink]="['/home']">Home</a>
     </li>
@@ -9,6 +9,9 @@
     <li routerLinkActive="active">
         <a [routerLink]="['/about']">About</a>
     </li>
+
+</ul>
+<ul *ngIf='logado'>
     <li routerLinkActive="active">
         <a [routerLink]="['/dashboard']">Dashboard</a>
     </li>

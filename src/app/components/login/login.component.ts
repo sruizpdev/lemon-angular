@@ -19,10 +19,9 @@ export class LoginComponent implements OnInit {
   login() {
     const { email, password } = this.profileForm.value;
     if (this._authService.login(email, password)) {
-      alert("login correcto");
       this.router.navigate(["/dashboard"]);
     } else {
-      alert("login incorrecto");
+      alert("Login incorrecto");
     }
   }
 }
