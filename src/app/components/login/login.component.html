@@ -1,16 +1,17 @@
 <app-navbar></app-navbar>
-<p>Formulario de login</p>
-<form [formGroup]="profileForm" (ngSubmit)="login()">
+<div class="container">
+    <h1>Login page</h1>
+    <form [formGroup]="profileForm" (ngSubmit)="login()">
+        <label>
+            Email:
+            <input type="email" formControlName="email">
+        </label>
 
-    <label>
-        Email:
-        <input type="email" formControlName="email">
-    </label>
+        <label>
+            Password:
+            <input type="text" formControlName="password">
+        </label>
+        <button type="submit" [disabled]="!profileForm.valid">Login</button>
 
-    <label>
-        Password:
-        <input type="text" formControlName="password">
-    </label>
-    <button type="submit" [disabled]="!profileForm.valid">Login</button>
-
-</form>
+    </form>
+</div>

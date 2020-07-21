@@ -10,8 +10,6 @@ export class NavbarComponent implements OnInit {
   @Input() logado: boolean;
   username: string;
   constructor(private _authService: AuthService) {
-    console.log(this._authService.getUsername());
-
     this.username = this._authService.getUsername();
   }
 
@@ -19,6 +17,6 @@ export class NavbarComponent implements OnInit {
   salir() {
     this.logado = false;
     this._authService.logout();
-    console.log("saliiendo....");
+    console.log("Saliendo...");
   }
 }
