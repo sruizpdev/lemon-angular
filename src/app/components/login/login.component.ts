@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
+import { FormGroup, FormControl } from "@angular/forms";
 
 @Component({
   selector: "app-login",
@@ -8,13 +9,20 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent implements OnInit {
-  constructor(private _authService: AuthService, private router: Router) {
-    if (_authService.login("master8@lemoncode.net", "12345678")) {
+  profileForm = new FormGroup({
+    email: new FormControl(""),
+    password: new FormControl(""),
+  });
+  constructor(private _authService: AuthService, private router: Router) {}
+  ngOnInit(): void {}
+
+  login() {
+    const { email, password } = this.profileForm.value;
+    if (this._authService.login(email, password)) {
       alert("login correcto");
       this.router.navigate(["/dashboard"]);
     } else {
       alert("login incorrecto");
     }
   }
-  ngOnInit(): void {}
 }

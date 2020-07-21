@@ -9,6 +9,6 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    return username === "master8@lemoncode.net" && password === "12345678";
+    return username === "2@2.com" && password === "111";
   }
 }
